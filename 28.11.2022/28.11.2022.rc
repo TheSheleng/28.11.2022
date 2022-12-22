@@ -1,0 +1,208 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "winres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Русский (Россия) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_RUS)
+LANGUAGE LANG_RUSSIAN, SUBLANG_DEFAULT
+#pragma code_page(1251)
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""winres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_DIALOG_MAIN DIALOGEX 0, 0, 330, 190
+STYLE DS_SETFONT | DS_MODALFRAME | DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "MyLib"
+FONT 12, "Arial", 700, 0, 0xCC
+BEGIN
+    LISTBOX         IDC_LIST1,10,30,90,120,LBS_SORT | LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    LISTBOX         IDC_LIST2,120,18,200,152,LBS_SORT | LBS_HASSTRINGS | LBS_USETABSTOPS | LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Libs:",IDC_STATIC,15,10,80,8
+    LTEXT           "",IDC_STATIC_BOOKS,145,10,170,8
+    PUSHBUTTON      "Refresh",IDC_BUTT_REFRESH,10,150,90,20
+    EDITTEXT        IDC_EDIT_SEARCH_LIB,10,18,90,12,ES_AUTOHSCROLL
+    LTEXT           "Book:",IDC_STATIC_BOOKS2,125,10,20,8
+END
+
+IDD_DIALOG_INPUTSTR DIALOGEX 0, 0, 165, 33
+STYLE DS_SETFONT | DS_MODALFRAME | DS_CENTER | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_RTLREADING
+CAPTION "EnterWin"
+FONT 12, "Arial", 700, 0, 0xCC
+BEGIN
+    EDITTEXT        IDC_EDIT_STR,10,10,90,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "Enter",IDC_BUTT_SEND,105,10,50,12
+END
+
+IDD_DIALOG_BOOK_CREATE DIALOGEX 0, 0, 180, 90
+STYLE DS_ABSALIGN | DS_SETFONT | DS_MODALFRAME | DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Book"
+FONT 12, "Arial", 700, 0, 0xCC
+BEGIN
+    LTEXT           "Path:",IDC_STATIC,10,27,20,12,SS_CENTERIMAGE
+    EDITTEXT        IDC_EDIT_NAME,35,10,135,12,ES_AUTOHSCROLL
+    CTEXT           "Status:",IDC_STATIC,10,44,70,8,SS_CENTERIMAGE
+    COMBOBOX        IDC_COMBO_GENRE,100,52,70,40,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    CTEXT           "Genre:",IDC_STATIC,100,44,70,8,SS_CENTERIMAGE
+    COMBOBOX        IDC_COMBO_STATUS,10,52,70,40,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    EDITTEXT        IDC_EDIT_PATH,35,27,110,12,ES_AUTOHSCROLL | ES_READONLY
+    PUSHBUTTON      "...",IDC_BUTT_PATH,150,27,20,12,BS_CENTER | BS_VCENTER
+    PUSHBUTTON      "Enter",IDC_BUTT_ENTER,30,69,120,12,BS_CENTER | BS_VCENTER | WS_DISABLED
+    LTEXT           "Name:",IDC_STATIC,10,10,20,12,SS_CENTERIMAGE
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    IDD_DIALOG_MAIN, DIALOG
+    BEGIN
+        LEFTMARGIN, 10
+        RIGHTMARGIN, 320
+        VERTGUIDE, 15
+        VERTGUIDE, 95
+        VERTGUIDE, 100
+        VERTGUIDE, 120
+        VERTGUIDE, 125
+        VERTGUIDE, 145
+        VERTGUIDE, 315
+        TOPMARGIN, 10
+        BOTTOMMARGIN, 170
+        HORZGUIDE, 18
+        HORZGUIDE, 30
+        HORZGUIDE, 150
+    END
+
+    IDD_DIALOG_INPUTSTR, DIALOG
+    BEGIN
+        LEFTMARGIN, 10
+        RIGHTMARGIN, 155
+        VERTGUIDE, 100
+        VERTGUIDE, 105
+        TOPMARGIN, 10
+        BOTTOMMARGIN, 23
+        HORZGUIDE, 22
+    END
+
+    IDD_DIALOG_BOOK_CREATE, DIALOG
+    BEGIN
+        LEFTMARGIN, 10
+        RIGHTMARGIN, 170
+        VERTGUIDE, 30
+        VERTGUIDE, 35
+        VERTGUIDE, 150
+        TOPMARGIN, 10
+        BOTTOMMARGIN, 80
+        HORZGUIDE, 22
+        HORZGUIDE, 27
+        HORZGUIDE, 39
+        HORZGUIDE, 44
+        HORZGUIDE, 52
+        HORZGUIDE, 64
+        HORZGUIDE, 69
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// AFX_DIALOG_LAYOUT
+//
+
+IDD_DIALOG_MAIN AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+IDD_DIALOG_INPUTSTR AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+IDD_DIALOG_BOOK_CREATE AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MENU1 MENU
+BEGIN
+    POPUP "Library"
+    BEGIN
+        MENUITEM "Create",                      ID_LIBRARY_CREATE
+        MENUITEM "Delete",                      ID_LIBRARY_DELETE, GRAYED
+    END
+    POPUP "Book"
+    BEGIN
+        MENUITEM "Create",                      ID_BOOK_CREATE, GRAYED
+        MENUITEM "Delete",                      ID_BOOK_DELETE, GRAYED
+    END
+    MENUITEM "Exit",                        ID_EXIT
+END
+
+#endif    // Русский (Россия) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
